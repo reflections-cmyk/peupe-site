@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peupe Advisory | Procurement &amp; operations advisory for growing businesses</title>
+<meta name="description" content="Peupe Advisory helps small businesses with the potential to scale get their contracts, systems and frameworks in order, so they can grow on steady ground.">
+<meta property="og:title" content="Peupe Advisory">
+<meta property="og:description" content="Build the systems before you scale. Procurement and operations advisory for growing businesses.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#081026">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23081026'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='34' fill='%237CC4FF'%3EP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alice&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --ink:#081026; --deep:#0B1531; --panel:#101C3D;
+  --text:#EDF1FA; --soft:#C6CEE2; --muted:#A9B3CC;
+  --blue:#7CC4FF; --blue-hi:#B5DEFF; --on-blue:#06101F;
+  --rule:rgba(124,196,255,.18); --rule-strong:rgba(124,196,255,.34);
+  --serif:Alice,Georgia,"Times New Roman",serif;
+  --sans:Manrope,"Segoe UI",system-ui,sans-serif;
+  --pad:clamp(20px,7vw,104px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--blue);text-decoration:none}
+a:hover{color:var(--blue-hi)}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--blue);color:var(--on-blue);padding:10px 16px;font-weight:700;z-index:100}
+.skip:focus{left:8px}
+.wrap{padding-inline:var(--pad);max-width:1320px;margin-inline:auto}
+h1,h2,h3,p{margin:0}
+h1,h2{font-family:var(--serif);font-weight:400;letter-spacing:-.005em}
+h2{font-size:clamp(34px,4vw,50px);line-height:1.12}
+h3{font-family:var(--serif);font-weight:400;font-size:25px;line-height:1.25}
+.lead{font-size:clamp(18px,1.6vw,20px);color:var(--soft);line-height:1.6}
+.muted{color:var(--muted)}
+.section{padding-block:clamp(76px,9vw,124px);border-top:1px solid var(--rule)}
+.section.alt{background:var(--deep)}
+.head{max-width:720px;display:flex;flex-direction:column;gap:18px;margin-bottom:56px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 26px;border-radius:4px;font-family:inherit;font-weight:600;font-size:16px;border:1px solid transparent;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.btn-primary{background:var(--blue);color:var(--on-blue)}
+.btn-primary:hover{background:var(--blue-hi);color:var(--on-blue)}
+.btn-line{border-color:var(--rule-strong);color:var(--text)}
+.btn-line:hover{border-color:var(--blue);color:var(--text)}
+.textlink{font-weight:600;border-bottom:1px solid var(--rule-strong);padding-bottom:2px}
+.textlink:hover{border-color:var(--blue)}
+
+/* header */
+.site-head{position:sticky;top:0;z-index:50;background:rgba(8,16,38,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+.head-inner{height:80px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{font-family:var(--serif);font-size:26px;color:var(--text);letter-spacing:.01em}
+.brand:hover{color:var(--text)}
+.brand span{color:var(--blue)}
+.nav{display:flex;align-items:center;gap:30px;font-size:15px}
+.nav a:not(.btn){color:var(--soft)}
+.nav a:not(.btn):hover{color:var(--text)}
+.nav .btn{min-height:44px;padding:0 20px;font-size:15px}
+.menu{display:none}
+.menu summary{list-style:none;cursor:pointer;width:48px;height:48px;display:grid;place-items:center;border:1px solid var(--rule-strong);border-radius:4px}
+.menu summary::-webkit-details-marker{display:none}
+.menu-panel{position:absolute;left:var(--pad);right:var(--pad);top:72px;background:var(--panel);border:1px solid var(--rule-strong);padding:10px;display:flex;flex-direction:column;box-shadow:0 30px 60px rgba(0,0,0,.45)}
+.menu-panel a{padding:14px 14px;color:var(--text)}
+.menu-panel a:hover{background:rgba(124,196,255,.07)}
+.menu-panel .btn{margin-top:8px;color:var(--on-blue)}
+
+/* hero */
+.hero{padding-block:clamp(90px,12vw,168px) clamp(80px,10vw,132px)}
+.hero h1{font-size:clamp(50px,7.4vw,104px);line-height:1.02;max-width:12ch}
+.hero-rule{width:120px;height:2px;background:var(--blue);margin:40px 0 32px}
+.hero-body{display:grid;grid-template-columns:minmax(0,640px) auto;gap:48px;align-items:end;justify-content:space-between}
+.actions{display:flex;flex-wrap:wrap;gap:14px}
+
+/* gaps */
+.gaps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px}
+.gaps div{border-top:2px solid var(--blue);padding-top:24px;display:flex;flex-direction:column;gap:12px}
+.gaps p{color:var(--muted)}
+
+/* services */
+.services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:72px}
+.services div{padding:30px 0;border-top:1px solid var(--rule);display:flex;flex-direction:column;gap:10px}
+.services p{color:var(--muted)}
+
+/* fractional */
+.split{display:grid;grid-template-columns:5fr 7fr;gap:72px;align-items:start}
+.split-left{display:flex;flex-direction:column;gap:22px}
+.plain{list-style:none;margin:0;padding:0}
+.plain li{padding:22px 0;border-top:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,220px) 1fr;gap:24px}
+.plain li:last-child{border-bottom:1px solid var(--rule)}
+.plain strong{font-weight:600}
+.plain span{color:var(--muted)}
+
+/* health check */
+.steps{list-style:none;margin:0;padding:0;counter-reset:s;display:flex;flex-direction:column}
+.steps li{counter-increment:s;display:grid;grid-template-columns:52px 1fr;gap:12px;padding:20px 0;border-top:1px solid var(--rule)}
+.steps li::before{content:counter(s);font-family:var(--serif);font-size:28px;color:var(--blue);line-height:1.2}
+.steps strong{display:block;font-weight:600;font-size:18px}
+.steps span{color:var(--muted)}
+.panel{border:1px solid var(--rule-strong);background:var(--panel);padding:40px;display:flex;flex-direction:column;gap:22px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.facts small{display:block;font-size:14px;color:var(--muted);margin-bottom:4px}
+.facts b{font-weight:600;font-size:17px}
+.ticks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.ticks li{padding-left:26px;position:relative}
+.ticks li::before{content:"";position:absolute;left:0;top:11px;width:12px;height:2px;background:var(--blue)}
+
+/* about */
+.about{display:grid;grid-template-columns:5fr 7fr;gap:80px;align-items:start}
+.photo{aspect-ratio:4/5;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover}
+.caption{margin-top:14px;font-size:15px;color:var(--muted)}
+.about-copy{display:flex;flex-direction:column;gap:22px}
+.about-copy p{color:var(--soft);max-width:62ch}
+.creds{margin-top:10px;border-top:1px solid var(--rule)}
+.cred{display:grid;grid-template-columns:minmax(0,170px) 1fr;gap:24px;padding:20px 0;border-bottom:1px solid var(--rule)}
+.cred small{font-size:15px;color:var(--muted)}
+.cred div{display:flex;flex-direction:column;gap:2px}
+.cred b{font-weight:600}
+.cred span{color:var(--muted);font-size:16px}
+
+/* clients */
+.story{display:grid;grid-template-columns:5fr 7fr;gap:72px;padding-top:32px;border-top:2px solid var(--blue)}
+.story small{font-size:15px;color:var(--muted);display:block;margin-bottom:10px}
+.story h3{font-size:clamp(28px,2.8vw,36px)}
+.story-body{display:flex;flex-direction:column;gap:22px}
+.story-body p{color:var(--soft)}
+.reviews{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;margin-top:64px}
+.review{margin:0;border-top:1px solid var(--rule);padding-top:24px}
+.review blockquote{margin:0 0 16px;font-family:var(--serif);font-size:22px;line-height:1.45}
+.review figcaption{color:var(--muted);font-size:15px}
+.review figcaption b{color:var(--text);font-weight:600}
+
+/* contact */
+.contact{display:grid;grid-template-columns:5fr 7fr;gap:72px;align-items:start}
+.contact-left{display:flex;flex-direction:column;gap:22px}
+.form{display:flex;flex-direction:column;gap:18px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field label{font-size:15px;font-weight:600;color:var(--soft)}
+.field input,.field textarea,.field select{width:100%;min-height:52px;padding:12px 16px;border-radius:4px;border:1px solid var(--rule-strong);background:var(--ink);color:var(--text);font:inherit;font-size:16px}
+.field textarea{min-height:140px;resize:vertical}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(124,196,255,.18)}
+.hidden{position:absolute;left:-9999px}
+
+/* footer */
+.site-foot{border-top:1px solid var(--rule);background:#060C1F}
+.foot-inner{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;padding-block:44px;font-size:15px;color:var(--muted)}
+
+@media (max-width:1040px){
+  .nav{display:none} .menu{display:block}
+  .hero-body,.split,.about,.story,.contact{grid-template-columns:1fr;gap:44px}
+  .gaps{grid-template-columns:1fr;gap:36px}
+  .services{grid-template-columns:1fr}
+  .reviews{grid-template-columns:1fr}
+  .photo{max-width:420px}
+}
+@media (max-width:600px){
+  .head-inner{height:70px} .menu-panel{top:64px}
+  .brand{font-size:22px}
+  .plain li,.cred{grid-template-columns:1fr;gap:4px}
+  .row,.facts{grid-template-columns:1fr}
+  .panel{padding:26px}
+  .actions .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="#top">Peupe <span>Advisory</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#fractional">Fractional</a>
+      <a href="#health-check">Health Check</a>
+      <a href="#about">About</a>
+      <a class="btn btn-primary" href="#contact">Book a free call</a>
+    </nav>
+    <details class="menu">
+      <summary aria-label="Open menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EDF1FA" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></summary>
+      <div class="menu-panel">
+        <a href="#services">Services</a>
+        <a href="#fractional">Fractional procurement</a>
+        <a href="#health-check">Health Check</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-primary" href="#contact">Book a free call</a>
+      </div>
+    </details>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap">
+      <h1>Build the systems before you scale.</h1>
+      <div class="hero-rule"></div>
+      <div class="hero-body">
+        <div style="display:flex;flex-direction:column;gap:14px"><p class="lead">Peupe Advisory helps small businesses with real growth potential get their contracts, vendors and operations in order, so growth builds on steady ground instead of chaos.</p><p class="muted">Serving businesses virtually, wherever you are.</p></div>
+        <div class="actions">
+          <a class="btn btn-primary" href="#contact">Book a free discovery call</a>
+          <a class="btn btn-line" href="#health-check">See the Health Check</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="head">
+        <h2>In a tight economy, small gaps get expensive.</h2>
+      </div>
+      <div class="gaps">
+        <div><h3>Money quietly leaking</h3><p>Vendors that haven't been renegotiated in years, overlapping subscriptions, and costs that crept up while you were busy running things.</p></div>
+        <div><h3>Time lost to workarounds</h3><p>Manual scheduling, invoicing and follow-ups that eat your week and keep you working in the business instead of on it.</p></div>
+        <div><h3>Growth you can't catch</h3><p>Opportunities you turn down or miss because your systems, cash flow or team can't stretch to meet them.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="services">
+    <div class="wrap">
+      <div class="head">
+        <h2>How I help</h2>
+        <p class="lead">Practical, hands-on work that pays for itself: fewer leaks, smoother operations and room to grow.</p>
+      </div>
+      <div class="services">
+        <div><h3>Cost and vendor review</h3><p>I review what you spend, benchmark your vendors and negotiate better terms, so savings show up as real dollars.</p></div>
+        <div><h3>Operations and workflow</h3><p>I map how work actually gets done and fix the bottlenecks, using automation only where it genuinely saves you time.</p></div>
+        <div><h3>Growth readiness</h3><p>I look at where your demand is heading and get your systems, pricing and capacity ready to grow without overextending.</p></div>
+        <div><h3>Risk and resilience</h3><p>I spot single-supplier dependence, weak contracts and data security gaps before they turn into emergencies.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="fractional">
+    <div class="wrap split">
+      <div class="split-left">
+        <h2>Your part-time procurement team.</h2>
+        <p class="lead">Need someone to manage vendors and contracts, but not ready for a full-time hire? I step in a few hours a week on a simple monthly retainer.</p>
+        <p class="muted">A good fit for nonprofits, clinics and growing small businesses.</p>
+        <div><a class="btn btn-line" href="#message" data-topic="fractional">Ask about fractional support</a></div>
+      </div>
+      <ul class="plain">
+        <li><strong>Vendor management</strong><span>Suppliers kept accountable, on time and on budget, with one point of contact.</span></li>
+        <li><strong>Contracts and renewals</strong><span>No more missed renewal dates or auto-renewing into a bad deal.</span></li>
+        <li><strong>Sourcing and quotes</strong><span>Competitive bids for new purchases, so you know you're paying a fair price.</span></li>
+        <li><strong>Spend tracking</strong><span>A clear picture of where your money goes each month, and where it can go further.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section alt" id="health-check">
+    <div class="wrap split">
+      <div class="split-left">
+        <h2>The Business Health Check</h2>
+        <p class="lead">A focused diagnostic that shows you exactly where your business stands and what to fix first.</p>
+        <ol class="steps">
+          <li><div><strong>Discover</strong><span>A conversation about your goals, your pressures and how the business runs day to day.</span></div></li>
+          <li><div><strong>Diagnose</strong><span>A close review of your spending, vendors, workflows and growth bottlenecks.</span></div></li>
+          <li><div><strong>Your action plan</strong><span>A clear, prioritized plan: what to fix first, what it's worth and what can wait.</span></div></li>
+          <li><div><strong>Put it to work</strong><span>Optional hands-on support or a monthly retainer to carry the plan through.</span></div></li>
+        </ol>
+      </div>
+      <div class="panel">
+        <div class="facts">
+          <div><small>Timeline</small><b>2 to 3 weeks</b></div>
+          <div><small>Pricing</small><b>Shared on your free discovery call</b></div>
+        </div>
+        <div style="height:1px;background:var(--rule)"></div>
+        <b style="font-weight:600">What's included</b>
+        <ul class="ticks">
+          <li>Spending and vendor review</li>
+          <li>Workflow walkthrough</li>
+          <li>Growth and risk snapshot</li>
+          <li>Prioritized action plan</li>
+          <li>A follow-up session to talk it through</li>
+        </ul>
+        <a class="btn btn-primary" href="#message" data-topic="health-check">Request a Health Check</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="wrap about">
+      <div>
+        <div class="photo"><img src="nonnie.jpg" alt="Nonnie Karanja, founder of Peupe Advisory" width="800" height="1000" loading="lazy"></div>
+        <p class="caption">Nonnie Karanja, Founder</p>
+      </div>
+      <div class="about-copy">
+        <h2>Hi, I'm Nonnie.</h2>
+        <p>I've built my career stepping into organizations during their messiest moments: contracts being consolidated, the same vendors paid from different accounts, and no single picture of the spend. My work has been building the reports, trackers and frameworks that turn that into clear decisions.</p>
+        <p>My journey started in Kenya, in small businesses and in public service with the Kenya Revenue Authority and the Kenya Police Service. Over ten years, I've worked across the public and private sectors in both Kenya and the United States, bringing a cybersecurity lens to procurement and operations.</p>
+        <p>Now I bring that clarity to small businesses that are ready to grow. I named the business Peupe, the Kiswahili word for stainless, because that's what I want for every business I work with.</p>
+        <div class="creds" aria-label="Experience and education">
+          <div class="cred"><small>Experience</small><div><b>10 years in procurement and operations</b><span>Public and private sectors, Kenya and the United States</span></div></div>
+          <div class="cred"><small>Master's degree</small><div><b>M.S. Cybersecurity and Information Systems</b><span>University of Missouri–St. Louis</span></div></div>
+          <div class="cred"><small>Bachelor's degree</small><div><b>B.S. Procurement and Contract Management</b><span>Jomo Kenyatta University of Agriculture and Technology, Kenya</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap contact">
+      <div class="contact-left">
+        <h2>Ready to build before you scale?</h2>
+        <p class="lead">Send a short note about your business. I'll reply within two business days with times for a free discovery call. All sessions are held virtually, so location is never a barrier.</p>
+        <p class="muted">Or email me directly at <a class="textlink" href="mailto:nonnie@peupeadvisory.com">nonnie@peupeadvisory.com</a></p>
+      </div>
+      <form class="form" id="message" name="contact" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="hidden"><label>Leave this empty: <input name="bot-field"></label></p>
+        <div class="row">
+          <div class="field"><label for="c-name">Your name</label><input id="c-name" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="c-email">Email</label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="field"><label for="c-biz">Business name</label><input id="c-biz" name="business" type="text" autocomplete="organization"></div>
+        <div class="field">
+          <label for="c-topic">I'm interested in</label>
+          <select id="c-topic" name="interest">
+            <option value="general">A free discovery call</option>
+            <option value="health-check">The Business Health Check</option>
+            <option value="fractional">Fractional procurement support</option>
+            <option value="services">Something else</option>
+          </select>
+        </div>
+        <div class="field"><label for="c-msg">Tell me a little about your business</label><textarea id="c-msg" name="message" required></textarea></div>
+        <div><button class="btn btn-primary" type="submit">Send message</button></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-inner">
+    <a class="brand" href="#top">Peupe <span>Advisory</span></a>
+    <div>© <span id="yr">2026</span> Peupe Advisory. Peupe Advisory is a trade name of Irugah Roots LLC.</div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('[data-topic]').forEach(function(a){
+    a.addEventListener('click', function(){ var s=document.getElementById('c-topic'); if(s) s.value=a.getAttribute('data-topic'); });
+  });
+  var menu=document.querySelector('.menu');
+  if(menu) menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ menu.removeAttribute('open'); }); });
+  document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
